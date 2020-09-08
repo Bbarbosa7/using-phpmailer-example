@@ -33,8 +33,8 @@ try {
 
     //AUTH
     $mail->Host = "smtp.sendgrid.net";
-    $mail->Username = "apikey";
-    $mail->Password = "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";
+    $mail->Username = "sua-api-do-sendgrid";
+    $mail->Password = "********************************";
     $mail->Port = "587";
 
     //MAIL
