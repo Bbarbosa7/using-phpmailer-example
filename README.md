@@ -1,2 +1,2 @@
-# using-phpmailer-example
-A simple example using phpmailer in class FSPHP
+# Config file to using phpmailer example
+A simple file to using to configure phpmailer

@@ -1,24 +1,13 @@
 <?php
-require __DIR__ . '/../../fullstackphp/fsphp.php';
-fullStackPHPClassName("07.04 - Utilizando um componente");
 
-require __DIR__ . "/../vendor/autoload.php";
-
-/*
- * [ instance ] https://packagist.org/packages/phpmailer/phpmailer
- */
-fullStackPHPClassSession("instance", __LINE__);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception as MailException;
 
 $phpMailer = new PHPMailer();
-var_dump($phpMailer instanceof PHPMailer);
-
 
 /*
  * [ configure ]
  */
-fullStackPHPClassSession("configure", __LINE__);
 
 try {
     $mail = new PHPMailer(true);
@@ -46,8 +35,6 @@ try {
     $mail->addAddress("bwbgestaoimob@gmail.com", "BWB Gestão Imobiliária");
     $send = $mail->send();
 
-    var_dump($send);
-
-} catch (MailException $exception){
-    echo message()->error($exception->getMessage());
+} catch (MailException $exception) {
+    echo $exception->getMessage();
 }
